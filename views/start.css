@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Estonia&family=Lato:ital,wght@1,300&family=Liter&family=Meow+Script&family=Montserrat:ital@0;1&family=Mr+Dafoe&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Updock&display=swap');
+h1{
+    margin-top: 200px;
+    margin-left: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400; 
+    font-size: 43px;
+    color: rgb(255, 255, 255);
+}
+body{
+    background-image: url("../photos/start\ bkg.jpg");
+     overflow: hidden;
+     background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat;  
+    background-attachment: fixed;  
+    min-height: 100vh; 
+}
+button{
+    width: 140px;
+    height: 35px;
+    border-radius: 13px;
+    margin-left: 200px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+button:hover{
+   transform: translateY(-10px);
+}
+img{
+    width: 320px;
+    height: 120px;
+    position: relative;
+    top: -10px;
+     
+}
+h2 {
+  display: inline-block;
+  margin: 0;
+  margin-left: 0px;
+}
+.btn2{
+    margin-top: 90px;
+    margin-left: 790px;
+    position: relative;
+    top: -510px;
+  cursor: pointer;
+
+}
