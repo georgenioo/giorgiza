@@ -1,20 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Estonia&family=Lato:ital,wght@1,300&family=Liter&family=Meow+Script&family=Montserrat:ital@0;1&family=Mr+Dafoe&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Updock&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
     background: linear-gradient(to right, #000000, #006400);
-    width: 100%;
-    height: 100%;
-    min-height: 100vh; 
-    background-color: hsl(0, 0%, 0%);
     color: #ffffff;
     display: flex;
     flex-direction: column;
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
+    max-width:100%;
+   
 }
 
 header {
@@ -25,7 +24,8 @@ header {
     align-items: center;
     justify-content: space-between;
     border-radius: 1px;
-    padding: 0 20px;
+    min-height: 50px;
+    padding: 0 2vw;
 }
 
 header nav {
@@ -34,16 +34,19 @@ header nav {
 }
 
 header nav img {
-    width: 200px;
+    width: clamp(190px,19vw, 200px );
     height: 70px;
     margin: 0;
-    margin-top: 10px;
+    margin-top: clamp(3px, 0.5vw, 5px);
+    min-width: 150px;
+    max-width: 200px;
+    height: auto;
 }
 
 header nav ul {
     display: flex;
     list-style-type: none;
-    gap: 45px;
+    gap: clamp(2vw, 4vw, 5vw);
     align-items: center;
 }
 
@@ -53,7 +56,7 @@ header nav ul li {
     cursor: pointer;
     text-align: center;
     margin-top: 0;
-   gap: 10px;
+   gap: clamp(10px, 1.5vw, 15px);
    position: relative;
       transition: all 0.3s ease;
 }
@@ -65,56 +68,57 @@ header nav ul li:hover{
 }
 
 input {
-    width: 270px;
+    width: clamp(260px, 26vw, 270px);
     height: 32px;
     border-radius: 20px;
     border: none;
-    padding: 0 10px;
+    padding: 0 clamp(8px, 1vw, 10px);
     margin: 0;
 }
 
 button {
-   display: flex;
+    display: flex;
     cursor: pointer;
-    width: 120px;
+    width: clamp(80px, 8vw, 90px);
     height: 30px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
-    padding-left: 20px;
-    padding-top: 5px;
-    gap: 20px;
+   padding-left: clamp(10px, 1.3vw, 13px);
+   position: relative;
     font-weight: 400;
     font-size:larger;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-   margin-right: 10px;
+   position: relative;
    transition: all 0.3s ease;
-   
+   margin-right: clamp(20px, 4vw, 40px);
+   align-items: center;
+   font-family: "Fira Sans Condensed", sans-serif;
 }
 button:hover{
-   
     text-underline-offset: 4px;
     transform: translatey(-2px);
 }
+
 .btn1 {
     display: flex;
-    gap: 20px;
+   position: relative;
+ 
+ 
     
 }
-
 .btn2 {
-    display: flex;
-    padding-left: 30px;
-    padding-right: 20px;
+  display: flex;
+  margin-left: clamp(30px, 5vw, 50px);
 
 }
   h1{
-    margin-top: 40px;
+    margin-top: 10px;
     margin-left: 390px;
     color: #ffffff;
     font-size: 40px;
     font-weight: 500;
-     font-family: "Playfair Display", serif;
+     font-family: "Cormorant Garamond", serif;
   }
   p{
     margin-left: 390px;
@@ -122,13 +126,15 @@ button:hover{
     margin-top: 5px;
     font-size: larger;
     font-weight: 300;
+    font-family: "Cormorant Garamond", serif;
   }
   .card{
+   
     width: 300px;
     height: 400px; 
     background-color: white;
     margin-left: 60px;
-    margin-top: 10px;
+    margin-top: 40px;
     border: none;
     border-radius: 15px;
    display: flex;
@@ -188,6 +194,18 @@ button:hover{
        display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
+  h3{
+    color: rgb(255, 255, 255);
+    margin-top: 40px;
+    gap: 25px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+  h3:hover{
+    text-decoration: underline;
+     text-underline-offset: 4px;
+    transform: translatey(-2px);
+}
  .upper_footer{
    
     height: 100px;
@@ -235,4 +253,117 @@ display: flex;
     margin-top: 30px;
     width: 100%;
 
+}
+
+@media screen and (min-width:1440px){
+        header {
+        height: 60px;
+        padding: 0 3vw;
+    }
+    
+    header nav img {
+        width: clamp(220px, 22vw, 250px);
+        height: 80px;
+    }
+    
+    header nav ul {
+        gap: clamp(3vw, 5vw, 6vw);
+    }
+    
+    header nav ul li {
+        font-size: 22px;
+    }
+    
+    input {
+        width: clamp(300px, 30vw, 320px);
+        height: 36px;
+        padding: 0 clamp(10px, 1.2vw, 12px);
+    }
+    
+    h1 {
+        margin-left: clamp(300px, 35vw, 420px);
+        font-size: clamp(36px, 4vw, 44px);
+        margin-top: 15px;
+    }
+
+    p {
+        margin-left: clamp(300px, 35vw, 420px);
+        font-size: clamp(1.1rem, 1.3vw, 1.2rem);
+        margin-top: 8px;
+    }
+
+    .card {
+        width: clamp(280px, 32vw, 320px);
+        height: clamp(380px, 45vw, 420px);
+        margin-left: clamp(40px, 8vw, 80px);
+        margin-top: 50px;
+    }
+
+    .card h2 {
+        font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+        padding-top: 25px;
+        margin-left: 15px;
+    }
+
+    .price {
+        font-size: clamp(22px, 2.5vw, 28px);
+        padding-left: clamp(100px, 12vw, 130px);
+    }
+
+    .oldprice {
+        font-size: clamp(18px, 2vw, 22px);
+        padding-left: clamp(100px, 12vw, 130px);
+    }
+
+    .duration {
+        padding-left: clamp(100px, 12vw, 130px);
+        font-size: clamp(0.9rem, 1.1vw, 1rem);
+    }
+
+    .wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: clamp(20px, 3vw, 40px);
+        padding: 0 clamp(20px, 3vw, 40px);
+    }
+
+    .wrapper ul li {
+        margin-bottom: 18px;
+        margin-left: clamp(30px, 5vw, 60px);
+        font-size: clamp(0.9rem, 1.1vw, 1rem);
+    }
+
+    .wrapper a {
+        margin-left: clamp(80px, 10vw, 120px);
+        font-size: clamp(18px, 2vw, 22px);
+        margin-bottom: 6px;
+    }
+
+    h3 {
+        margin-top: 50px;
+        font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+    }
+  
+    footer {
+        margin-top: 400px;
+        padding: 40px;
+        color: white;
+    }
+    
+    .middle-footer {
+         font-size:40px;
+        gap: 150px;
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+    
+    .middle-footer li {
+        gap: 50px;
+        padding: 12px 0;
+        font-size: 1.1rem;
+    }
+    
+    .bottom-footer {
+        margin-top: 40px;
+        font-size: 1.1rem;
+    }
 }

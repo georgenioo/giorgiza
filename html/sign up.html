@@ -8,26 +8,28 @@
 </head>
 <body>
 
-  
+         <a style="text-decoration: none;" href="/html/index.html"><button  class="Back" type="button"> Back</button></a>
       <div class="up">
-
-        <h1>Sign up</h1>
+   <form action="/index.html" name="signform" onsubmit="return validateform(event)">
+       <h1>Sign up</h1>
         <label for="email">Email address</label>
-        <input type="email" name="" id="" placeholder="email address">
+        <input type="email" name="femail" id="email" placeholder="email address">
        <label for="password">Password</label>
-       <input type="password", name="", id="", placeholder="password">
+       <input type="password", name="fpassword", id="password", placeholder="password">
        <label for="username">username</label>
-       <input type="username", name="", id="", placeholder="username">
-       <a href="/index.html", style="text-decoration: none;"> <button class="first">Sign UP</button></a>
+       <input type="text", name="fusername", id="username", placeholder="username">
+       <a href="/index.html", style="text-decoration: none;"> <button class="first" type="submit" value="submit">Sign UP</button></a>
         
        <hr>
-       
-        <button class="other" id="1">Sign up With   <img src="/photos/pngwing.com (17).png" alt=""></button>
-  
-        <p>or</p>
-        <button class="other">Sign up With  <img src="/photos/pngwing.com (16).png" alt=""></button>
-       
+
+        </form>
+              <a href="/html/index.html" style="text-decoration: none; "><button style="font-weight: 600; color: rgb(21, 21, 20);" class="other"  >Sign up With   <img style="position: relative; top: -10px;right: 20px; width: 40px; height:40px;" src="/photos/pngwing.com (17).png" alt=""></button></a>
+        <p style="position: relative; top: 11px; color: rgb(255, 255, 255); right: 15px; ">OR</p>
+        <a href="/html/index.html" style="text-decoration: none; "><button style="font-weight: 600; color: rgb(21, 21, 20); " class="other" >Sign up With  <img style="position: relative; top: -10px;right: 20px; width: 40px; height:40px;" src="/photos/pngwing.com (16).png" alt=""></button></a>
       </div>
-      
+
+       <script src="/js/validation/signupvalidation.js"></script>
+       <script src="/js/user.js"></script>
+       
 </body>
 </html>

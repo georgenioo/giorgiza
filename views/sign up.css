@@ -23,6 +23,7 @@ body{
 .up{
     margin-top: 30px;
     border-radius: 8px;
+    width: clamp(390px, 39vw, 400px);
     width: 400px;
     height: 550px;
     background-color:   #4A3020;
@@ -39,7 +40,7 @@ input{
     margin-top: 10px;
     border-radius: 7px;
     width: 50%;
-    height: 6%;
+    height: 30px;
     padding-left: 5px;
     border: none;
 }
@@ -58,12 +59,12 @@ label{
     display: flex;
     margin-top: 30px;
     margin-left: 120px;
-    width: 170px;
+    width: clamp(160px, 16vw, 170px);
     height: 40px;
     border-radius: 20px;
     font-size:larger;
     font-weight: 300;
-    padding-left: 45px;
+    padding-left: 50px;
     padding-top: 10px;
     margin-bottom: 10px;
     cursor: pointer;
@@ -78,13 +79,33 @@ button:hover{
      text-underline-offset: 4px;
     transform: translatey(-2px);
 }
+ .Back{
+   position: relative;
+   left: 700px;
+   top: -240px;
+   width: 100px;
+   height: 30px;
+   border: none;
+   border-radius: 10px;
+   font-size: larger;
+   font-weight: 400;
+   padding-right: 12px;
+   position: relative;
+   cursor: pointer;
+   z-index: 2;
+      font-family: "Montserrat", sans-serif;
+ }
+.Back::before{
+   content: '← ';
+   margin-right: 1px;
+}
 .other
 {
     margin-left: 100px;
    display: flex;
    margin-top: 20px;
    gap: 30px;
-   width: 200px;
+   width: clamp(190px, 19vw, 200px);
    height: 40px;
    border-radius: 15px;
    padding-left: 20px;
@@ -109,34 +130,65 @@ display: flex;
     flex-direction: column;
     border-radius: 5px;
  }
- .middle-footer {
-    flex-wrap: wrap;
-    display: flex;
- gap: 120px;
-    margin-top: 40px;
-      margin-left: 10px;
-    width: 100%;
-}
 
-.middle-footer  ul {
-    display: flex;
-    flex-direction: column;
+
+
+ 
+@media screen and (min-width: 1440px) {
+    body {
+        padding: 0 5%;
+    }
     
-
+    .up {
+        width: 480px;
+        height: 640px;
+        margin-right: 100px;
+        margin-top: 50px;
+    }
+    
+    h1 {
+        margin-left: 180px;
+        margin-top: 40px;
+        font-size: 1.8rem;
+    }
+    
+    input {
+        width: 55%;
+        height: 35px;
+        margin-left: 30px;
+        margin-top: 15px;
+        font-size: 1.1rem;
+        padding-left: 10px;
+    }
+    
+    label {
+        margin-left: 30px;
+        margin-top: 25px;
+        font-size: 1.1rem;
+    }
+    
+    .first {
+        width: 200px;
+        height: 45px;
+        margin-left: 140px;
+        margin-top: 40px;
+        font-size: 1.2rem;
+        padding-left: 60px;
+        padding-top: 12px;
+    }
+    
+    .other {
+        width: 220px;
+        height: 45px;
+        margin-left: 130px;
+        margin-top: 25px;
+        font-size: 1.1rem;
+        padding-left: 30px;
+        padding-top: 12px;
+    }
+    
+    p {
+        margin-left: 240px;
+        font-size: 1.1rem;
+    }
 }
-
-.middle-footer  li {
-    display: flex; 
-    gap: 40px;
-    padding: 10px 0; 
-    cursor: pointer;
-}
-
-.bottom-footer {
-    display: flex;
-    justify-content: center; 
-    margin-top: 30px;
-    width: 100%;
-
-}
-

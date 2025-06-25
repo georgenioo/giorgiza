@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav>
-        <a href="/index.html"><img src="/photos/Screenshot__14_-removebg-preview.png" alt="melodify logo"></a>
+        <a href="/html/index.html"><img src="/photos/Screenshot__14_-removebg-preview.png" alt="melodify logo"></a>
             <ul>
                 <li>
                     <input type="text" placeholder="search music or artist">
@@ -22,49 +22,63 @@
                 <a href="/html/premium.html " style="text-decoration: none;"><li>premium</li></a> 
             </ul>
         </nav>
-        <div class="btn1">
-            <a href="/html/sign up.html", style="text-decoration: none;"><button>Sign up</button></a>
+       <div class="btn1">
+            <a href="/html/sign up.html", style="text-decoration: none;"><button style="padding-left: 15px;">Sign up</button></a>
             <div class="btn2">
-               <a href="/html/log in.html", style="text-decoration: none;"><button>Log in</button></a>
+               <a href="/html/log in.html", style="text-decoration: none; "><button style="padding-left: 19px;">Log in</button></a>
             </div>
         </div>
             
     </header>
-    <h1><i class="fas fa-cog icon"></i> Settings</h1>
-<div class="main">
-  <div class="account">
-  <h2><i class="fas fa-user icon" style="color: white;"></i> Account</h2>
-  <h3><i ></i> Username</h3>
-  <h3><i ></i> Display Name</h3>
-  <h3><i ></i> Profile Picture</h3>
+
+      <h2 style="position: relative; top: -30px; right: -300px;"><i class="fas fa-user icon"  style="color: white; margin-top: 20px; "></i> Account</h2>
+    <p style="position: relative; bottom:10px; right: -480px; color: white;">Profile Picture</p>
+   
+      <div class="circle" id="circle" onclick=" openComputerFolder()">
+        <img src="/photos/pngwing.com (19).png" alt="">
+       
+         
+      </div>
+       
+       <div class="account">
+       <label  class="username"  for="">username</label>
+        <input id="input1" class="username" type="text" placeholder="username">
+
+        <label class="displayname" for="">displayname</label>
+        <input id="input2" class="displayname" type="text" placeholder="displayname">
+
+        <label class="date" for="">date of birth</label>
+        <input id="input3" class="date" type="date" placeholder="date">
+
+        <label class="gender" for="">gender</label>
+        <input id="input4" class="gender" type="" placeholder="gender">
+   
+        <button id="savebutton"  class="changes" > Save Changes</button>
+     </div>
+<div class="main"> 
+
+
+
 </div>
 
-<h2><i class="fas fa-sliders-h icon" style="color: white;"></i> General</h2>
-<div class="general">
-  <h3><i ></i> Language</h3>
-  <h3><i ></i> Genres you like</h3>
-</div>
-
-<h2><i class="fas fa-bell icon" style="color: white;"></i> Notifications</h2>
+<h2 style="position: relative; right: 70px;"><i class="fas fa-bell icon" style="color: white; "></i> Notifications</h2>
 <div class="notifications">
-  <h3><i ></i> Comment</h3>
-  <h3><i ></i> Message</h3>
-  <h3><i ></i> New Followers</h3>
-  <h3><i ></i> Email</h3>
+  <h3 style="margin-left: 15px;"><i ></i> Comment</h3> <input class="checkbox" type="checkbox">
+  <h3 style="margin-left: 15px;"><i ></i> Message</h3>  <input class="checkbox" type="checkbox">
+  <h3 style="margin-left: 15px;"><i ></i> New Followers</h3> <input class="checkbox" type="checkbox">
+  <h3 style="margin-left: 15px;"><i ></i> Email</h3> <input class="checkbox" type="checkbox">
+  <h3 style="margin-left: 15px;"><i ></i> Suggestions</h3> <input class="checkbox" type="checkbox">
+    <h3 style="margin-left: 15px;"><i ></i> Daily mixes</h3> <input class="checkbox" type="checkbox">
 </div>
 
-<h2><i class="fas fa-shield-alt icon" style="color: white;"></i> Legal & Support</h2>
-<div class="support">
-  <h3><i ></i> Terms of Service</h3>
-  <h3><i ></i> Delete Account</h3>
-  <h3><i ></i> Report Support</h3>
-  <h3><i ></i> Help</h3>
+<div  class="support">
+
+  <h3 id="help"  style="margin-left: 15px; padding: 10px; cursor: pointer;"><i ></i> Help</h3>
 </div>
 </div>
 
 <footer>
          <div class="upper-footer">
-           <img src="/photos/" alt="">
             Contact: info@melodify.com 
          </div>
          <div class="middle-footer">
@@ -113,6 +127,8 @@
                 Site Credits: Website by Giorgi Zaqroshvili
          </div>
       </footer>
+
+      <script src="/js/settings.js"></script>
 </body>
 </html>
 

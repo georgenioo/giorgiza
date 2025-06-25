@@ -1,0 +1,31 @@
+{
+  "name": "proeqti",
+  "version": "1.0.0",
+  "main": "search.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon js/user.js",
+    "dev": "node js/search.js",
+    "premium": "node  js/buyvalidation.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgenioo/giorgiza.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/georgenioo/giorgiza/issues"
+  },
+  "homepage": "https://github.com/georgenioo/giorgiza#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.15.1",
+    "nodemon": "^3.1.10"
+  },
+  "description": ""
+}

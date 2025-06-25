@@ -1,10 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Estonia&family=Lato:ital,wght@1,300&family=Liter&family=Meow+Script&family=Montserrat:ital@0;1&family=Mr+Dafoe&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Updock&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     background: linear-gradient(to right, #000000, #006400);
     color: #006400;
@@ -12,6 +13,8 @@ body {
     flex-direction: column;
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
+    max-width:100%;
+   
 }
 
 header {
@@ -22,7 +25,8 @@ header {
     align-items: center;
     justify-content: space-between;
     border-radius: 1px;
-    padding: 0 20px;
+    min-height: 50px;
+    padding: 0 2vw;
 }
 
 header nav {
@@ -31,16 +35,19 @@ header nav {
 }
 
 header nav img {
-    width: 200px;
+    width: clamp(190px,19vw, 200px );
     height: 70px;
     margin: 0;
-    margin-top: 5px;
+    margin-top: clamp(3px, 0.5vw, 5px);
+    min-width: 150px;
+    max-width: 200px;
+    height: auto;
 }
 
 header nav ul {
     display: flex;
     list-style-type: none;
-    gap: 45px;
+    gap: clamp(2vw, 4vw, 5vw);
     align-items: center;
 }
 
@@ -50,7 +57,7 @@ header nav ul li {
     cursor: pointer;
     text-align: center;
     margin-top: 0;
-   gap: 10px;
+   gap: clamp(10px, 1.5vw, 15px);
    position: relative;
       transition: all 0.3s ease;
 }
@@ -62,67 +69,65 @@ header nav ul li:hover{
 }
 
 input {
-    width: 270px;
+    width: clamp(260px, 26vw, 270px);
     height: 32px;
     border-radius: 20px;
     border: none;
-    padding: 0 10px;
+    padding: 0 clamp(8px, 1vw, 10px);
     margin: 0;
 }
 
 button {
     display: flex;
     cursor: pointer;
-    width: 120px;
+    width: clamp(80px, 8vw, 90px);
     height: 30px;
-    border-radius: 20px;
-    padding-left: 20px;
+    border-radius: 10px;
     border: none;
-    padding-top: 5px;
-    gap: 20px;
+   padding-left: clamp(10px, 1.3vw, 13px);
+   position: relative;
     font-weight: 400;
     font-size:larger;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-   margin-right: 10px;
    position: relative;
    transition: all 0.3s ease;
+   margin-right: clamp(20px, 4vw, 40px);
+   align-items: center;
+   font-family: "Fira Sans Condensed", sans-serif;
 }
 button:hover{
-   
     text-underline-offset: 4px;
     transform: translatey(-2px);
 }
+
 .btn1 {
     display: flex;
-    gap: 20px;
-    
+   position: relative;
+ 
+ 
     
 }
-
 .btn2 {
-    display: flex;
-    padding-left: 50px;
-    padding-right: 20px;
-    
+  display: flex;
+  margin-left: clamp(30px, 5vw, 50px);
 
 }
-
-
 .menu{
     position: fixed;
     top: 0;
-    width: 200px;
+    width: clamp(190px, 19vw, 200px);
     height: 100%;
     z-index: 1000;
     position: sticky;
     overflow-x:hidden;
     overflow: hidden;
-    padding-top: 10px;
+    padding-top: clamp(8px, 1vw, 10px);
     transition: 0.6s ease-in-out;
     box-shadow: 0 0 10px black;
     background-color: rgb(255, 255, 255);
     border-radius: 3px;
+    margin-bottom: clamp(200px, 29vw, 290px);
 }
 .menu.collapsed{
     width: 60px;
@@ -131,7 +136,7 @@ button:hover{
      position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 15px;
+    padding: clamp(12px, 1.5vw, 15px);
     border-top: 1px solid #e0e0e0;
     text-align: center;
     font-size: 40px;
@@ -146,7 +151,7 @@ button:hover{
 }
 .menu ul li{
     list-style: none;
-    margin: 5px 0;
+    margin: clamp(3px, 0.5vw, 5px) 0;
 }
 .menu ul li:hover{
     transition: 0.3 ease;
@@ -156,7 +161,7 @@ button:hover{
     position: relative;
     display: flex;
     align-items: center;
-    padding: 12px 15px;
+    padding: clamp(10px, 1.2vw, 12px) clamp(12px, 1.5vw, 15px);
     text-decoration: none;
     color: rgb(0, 0, 0);
     transition: all 0.2s ease;
@@ -165,31 +170,18 @@ button:hover{
 .menu ul li a:hover{
    background: rgb(6, 94, 6);
     color: white;
-    padding-left: 20px;
+    padding-left: clamp(18px, 2vw, 20px);
 }
 menu ul li .icon{
  display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
+    width: clamp(20px, 2vw, 24px);
     height: 24px;
-    margin-right: 15px;
+    margin-right: clamp(12px, 1.5vw, 15px);
     font-size: 16px;
 }
-.card{
-    width: 170px;
-    height: 170px;
-    background-color: rgb(255, 255, 255);
-    margin-left: 40px;
-    position: relative;
-    top: -550px;
-    margin-top: 40px;
-    border-radius: 7px;
-    -webkit-box-shadow: 32px 30px 51px 0px rgba(18,18,18,0.31);
-    -moz-box-shadow: 32px 30px 51px 0px rgba(18,18,18,0.31);
-    box-shadow: 32px 30px 51px 0px rgba(18,18,18,0.31);
 
-}
 
 .icon{
    position: relative;
@@ -206,38 +198,43 @@ menu ul li .icon{
     height: 170px;
     border-radius: 7px 7px 0 0;
     object-fit: cover;
+    max-width: 100%;
+    height: auto;
+ 
 }
 h4{
     color: rgb(255, 255, 255);
-    padding-left: 7px;
+    padding-left: clamp(5px, 0.7vw, 7px);
 
 }
 p{
     color: rgb(255, 255, 255);
-    padding: 0 10px 15px 10px;
+    padding: 0 clamp(8px, 1vw, 10px) clamp(12px, 1.5vw, 15px) clamp(8px, 1vw, 10px);
 }
 
 .songs{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-       gap: 26px;
-   
-    margin-left: 210px;
-    margin-right: 70px;
+       gap: clamp(20px, 2.6vw, 26px);
+    margin-left: clamp(150px, 21vw, 210px);
+    margin-right: clamp(50px, 7vw, 70px);
     
 }
 .card{
       background-color: white;
-    width: 170px;
-    height: 170px;
+      width: clamp(160px, 16vw, 170px);
+    height: clamp(160px, 16vw, 170px);
     border: none;
     border-radius: 10px;
-        background-size: cover;
-  background-position: center;
-  cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    top: clamp(-850px, -85vw, -400px);
+    margin-left: clamp(20px, 4vw, 40px);
+    margin-top: clamp(30px, 4vw, 40px);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-       -webkit-box-shadow: 32px 30px 51px 0px rgba(71, 69, 69, 0.31);
+    position: relative;
+    -webkit-box-shadow: 32px 30px 51px 0px rgba(71, 69, 69, 0.31);
     -moz-box-shadow: 32px 30px 51px 0px rgba(132, 124, 124, 0.31);
     box-shadow: 32px 30px 51px 0px rgba(87, 84, 84, 0.31);
 }
@@ -289,49 +286,49 @@ p{
         }
 
         p {
-            padding-top: 8px;
+            padding-top: clamp(6px, 0.8vw, 8px);
             color: #8999aa;
             transition: all 0.3s ease;
             font-size: 14px;
-            padding-left: 10px;
+            padding-left: clamp(8px, 1vw, 10px);
         }
 
         h4 {
-            padding-top: 5px;
-            margin-top: 150px;
+            padding-top: clamp(4px, 0.5vw, 5px);
+            margin-top: clamp(140px, 15vw, 150px);
             color: white;
             transition: all 0.3s ease;
             font-weight: 600;
-            padding-left: 10px;
+            padding-left: clamp(8px, 1vw, 10px);
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
         }
 
  p{
    
-    padding-top: 5px;
+    padding-top: clamp(4px, 0.5vw, 5px);
     color: white;
     color: #8999aa;
  }
   h4{
-    padding-top: 3px;
-    margin-top: 170px;
+    padding-top: clamp(2px, 0.3vw, 3px);
+    margin-top: clamp(160px, 17vw, 170px);
     color: white;
   }
   footer{
-   
-    
+position: relative;
 display: flex;
   background-color: rgba(0, 0, 0, 0.621);
     flex-direction: column;
     border-radius: 5px;
      color: white;
+   
  }
  .middle-footer {
     flex-wrap: wrap;
     display: flex;
- gap: 120px;
-    margin-top: 40px;
-      margin-left: 10px;
+     gap: clamp(20px, 8vw, 120px);
+    margin-top: clamp(30px, 4vw, 40px);
+      margin-left: clamp(8px, 1vw, 10px);
     width: 100%;
     
 }
@@ -345,8 +342,8 @@ display: flex;
 
 .middle-footer  li {
     display: flex; 
-    gap: 40px;
-    padding: 10px 0; 
+    gap: clamp(30px, 4vw, 40px);
+    padding: clamp(8px, 1vw, 10px) 0; 
     cursor: pointer;
    
 }
@@ -354,10 +351,92 @@ display: flex;
 .bottom-footer {
     display: flex;
     justify-content: center; 
-    margin-top: 30px;
+    margin-top: clamp(25px, 3vw, 30px);
     width: 100%;
 
 }
 
 
- 
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .songs {
+        margin-left: 210px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        position: relative;
+        top: -420px;
+    }
+}
+
+
+
+@media screen and (min-width:1440px){
+         header {
+        height: 60px;
+        padding: 0 3vw;
+    }
+    
+    header nav img {
+        width: clamp(220px, 22vw, 250px);
+        height: 80px;
+    }
+    
+    header nav ul {
+        gap: clamp(3vw, 5vw, 6vw);
+    }
+    
+    header nav ul li {
+        font-size: 22px;
+    }
+    
+    input {
+        width: clamp(300px, 30vw, 320px);
+        height: 36px;
+        padding: 0 clamp(10px, 1.2vw, 12px);
+    }
+    
+    button {
+        width: clamp(90px, 9vw, 100px);
+        height: 34px;
+        font-size: 1.1rem;
+        margin-right: clamp(25px, 5vw, 50px);
+    }
+    
+    .btn2 {
+        margin-left: clamp(40px, 6vw, 60px);
+    }
+
+    .songs {
+        margin-left: 210px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        position: relative;
+        top: -420px;
+       
+    }
+    .menu{
+        margin-bottom: 450px;
+    }
+ footer {
+        
+        padding: 40px;
+    }
+    
+    .middle-footer {
+         font-size:20px;
+        gap: 150px;
+        margin-right: 100px;
+        margin-top: 50px;
+    }
+    
+    .middle-footer li {
+        gap: 50px;
+        padding: 12px 0;
+        font-size: 1.1rem;
+    }
+    
+    .bottom-footer {
+        margin-top: 40px;
+        font-size: 1.1rem;
+    }
+}
+
+
